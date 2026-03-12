@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="container">
+
+        <h1 class="title">🎉 Happy Birthday My sis 💖</h1>
+
+        <p class="subtitle">Click the cake to cut it 🎂</p>
+
+        <div class="cake" onclick="cutCake()">
+            🎂
+        </div>
+
+        <p id="cakeMessage"></p>
+
+        <button onclick="showMessage()" class="btn">
+Open Your Surprise 💌
+</button>
+
+        <div id="loveMessage" class="hidden">
+            <h2>💖 Special Message</h2>
+            <p>
+                Happy Birthday to the most amazing person in my life ❤️ You make every moment magical. I wish your life be filled with happiness, love and success. Today is your day 🎉
+            </p>
+        </div>
+
+        <h2 class="memories">📸 Our Memories</h2>
+
+        <div class="slideshow">
+            <img id="slide">
+        </div>
+
+        <canvas id="fireworks"></canvas>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
