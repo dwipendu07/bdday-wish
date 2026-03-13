@@ -49,34 +49,42 @@ document.getElementById("loveMessage").style.display="block";
 
 // Slideshow
 let images=[
-"images/photo1.jpg",
-"images/photo2.webp",
-"images/photo3.jpg",
-"images/photo4.jpg"
+    "images/photo1.jpg",
+    "images/photo2.webp",
+    "images/photo3.jpg",
+    "images/photo4.jpg"
 ];
 
 let i=0;
 let slide=document.getElementById("slide");
 
 function changeSlide(){
-slide.src=images[i];
-slide.onload=function(){
-slide.style.display="block";
-setTimeout(function(){
-i=(i+1)%images.length;
-changeSlide();
-},3000);
-};
-slide.onerror=function(){
-console.log("Error loading " + images[i]);
-slide.style.display="none";
-i=(i+1)%images.length;
-changeSlide();
-};
+    if(!slide) {
+        console.error("Slide element not found");
+        return;
+    }
+    
+    slide.src=images[i];
+    slide.style.display="block";
+    
+    slide.onload=function(){
+        setTimeout(function(){
+            i=(i+1)%images.length;
+            changeSlide();
+        },3000);
+    };
+    
+    slide.onerror=function(){
+        console.error("Error loading " + images[i]);
+        i=(i+1)%images.length;
+        changeSlide();
+    };
 }
 
-changeSlide();
-
+// Only start slideshow if element exists
+if(slide) {
+    changeSlide();
+}
 
 // Fireworks
 const canvas=document.getElementById("fireworks");
@@ -128,5 +136,6 @@ function animate(){
         ctx.clearRect(0,0,canvas.width,canvas.height);
     }
 }
+
 
 animate();
