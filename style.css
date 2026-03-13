@@ -1,0 +1,113 @@
+html, body{
+    /* ensure the gradient fills the viewport even when there's little content */
+    height:100%;
+    margin:0;
+}
+
+body{
+    font-family:Arial;
+    /* keep the gradient fixed and cover the full area */
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4) fixed;
+    background-size:cover;
+    text-align:center;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+padding:30px;
+}
+
+.title{
+font-size:3rem;
+animation:fadeIn 3s;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.cake{
+font-size:80px;
+cursor:pointer;
+margin:20px;
+transition:transform 0.3s;
+}
+
+.cake:hover{
+transform:scale(1.2);
+}
+
+.btn{
+padding:15px 25px;
+font-size:18px;
+border:none;
+border-radius:25px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+margin-top:20px;
+}
+
+.btn:hover{
+background:#ff1e4d;
+}
+
+.hidden{
+display:none;
+margin-top:20px;
+font-size:20px;
+}
+
+.slideshow{
+margin-top:20px;
+}
+
+.slideshow img{
+width:300px;
+height:300px;
+border-radius:20px;
+object-fit:cover;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.memories{
+margin-top:40px;
+}
+
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    display:none;
+    z-index:999;
+    /* leave canvas transparent so the gradient shows through */
+    background:transparent;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+.music-btn{
+position:fixed;
+top:20px;
+right:20px;
+padding:10px 20px;
+font-size:16px;
+border:none;
+border-radius:25px;
+background:rgba(255,77,109,0.9);
+color:white;
+cursor:pointer;
+z-index:1000;
+transition:background 0.3s;
+}
+
+.music-btn:hover{
+background:rgba(255,30,77,0.9);
+}
