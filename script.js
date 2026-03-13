@@ -49,10 +49,10 @@ document.getElementById("loveMessage").style.display="block";
 
 // Slideshow
 let images=[
-    "images/photo1.jpg",
-    "images/photo2.webp",
-    "images/photo3.jpg",
-    "images/photo4.jpg"
+    "photo1.jpg",
+    "photo2.webp",
+    "photo3.jpg",
+    "photo4.jpg"
 ];
 
 let i=0;
@@ -139,3 +139,4 @@ function animate(){
 
 
 animate();
+
